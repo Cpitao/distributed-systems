@@ -1,0 +1,32 @@
+version: '1.0'
+
+networks:
+  chat-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/24
+          gateway: 10.0.0.1
+
+services:
+  chat-server:
+    container_name: chatserver
+    image: chat
+    build:
+      context: .
+    expose:
+      - "13337"
+    entrypoint: ["java", "Server"]
+    networks:
+      - chat-network
+  chat-client:
+    image: chat
+    build:
+      context: .
+    networks:
+      - chat-network
+    stdin_open: true
+    tty: true
+    entrypoint: ["java", "Client", "chatserver"]
+    depends_on:
+      - chat-server
