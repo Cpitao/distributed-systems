@@ -12,7 +12,7 @@ replace_signs = {
 
 
 # this should generate limited number of variations, so that we don't get blocked from using API
-def generate_variations(password: str, top: int = 20):
+def generate_variations(password: str, top: int = 10):
     top = min(20, top)
     variations = {password}
     total_changes = len(COMMON_END) + len(replace_signs.keys()) - 1

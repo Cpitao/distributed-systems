@@ -23,8 +23,8 @@ class HibpAPI:
             except ValueError:
                 return None
             result[ending] = count
-
         return result
+
 
 
 if __name__ == "__main__":
