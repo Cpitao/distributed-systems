@@ -5,12 +5,14 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel
 import secrets
+from typing import Union
 
 import cat_api as cat_response
 import hibp_api
 import hasher
 import password_variations
 import datamuse_api
+import textrazor_api
 
 app = FastAPI()
 
@@ -89,6 +91,8 @@ async def main(credentials: HTTPBasicCredentials = Depends(security)):
             <input type="number" id="variations" name="variations" min="0" max="20" value="10"><br>
             <label for="top_similar">Show up to top N similar passwords:</label>
             <input type="number" id="top_similar" name="top_similar" min="0" max="100" value="10"><br>
+            <label for="dict_url">Check if your password could be brute-forced with wordlist from given page:</label>
+            <input type="text" name="dict_url"><br>
             <input type="submit" value="Check">
         </form>
         <p style="color:red">Warning: the bigger the numbers, the longer it may take to process your request</p>
@@ -99,7 +103,7 @@ async def main(credentials: HTTPBasicCredentials = Depends(security)):
 
 @app.post("/check", response_class=HTMLResponse)
 async def check_password(password: str = Form(), top_similar: int = Form(),
-                         variations: int = Form(),
+                         variations: int = Form(), dict_url: Union[str, None] = Form(),
                          credentials: HTTPBasicCredentials = Depends(security)):
     verify_user(credentials)
 
@@ -113,6 +117,20 @@ async def check_password(password: str = Form(), top_similar: int = Form(),
 
     password_strength = "<p style=\"color:green\">good</p>" if sum(similar_passwords_leaked.values()) == 0 \
         else "<p style=\"color:red\">bad</p>"
+
+    wordlist_html = ""
+    if dict_url is not None:
+        textrazorApi = textrazor_api.TextrazorAPI()
+        textrazorApi.get_keywords(dict_url)
+        best_match = textrazorApi.best_matches(password)
+        if best_match is not None:
+            wordlist_html = f"<p>The closest word from given URL to your password would be {best_match}</p>"
+            password_strength = "<p style=\"color:red\">bad</p>"
+        else:
+            wordlist_html = "<p>The URL you provided is either broken or yielded no keywords</p>"
+
+
+
 
     if sum(similar_passwords_leaked.values()) > 0:
         html_table = "<h3>Similar passwords leaked</h3>" \
@@ -132,6 +150,7 @@ async def check_password(password: str = Form(), top_similar: int = Form(),
         for word in similar_words:
             similar_words_html += f"<li>{word}</li>\n"
         similar_words_html += "</ul>"
+        password_strength = "<p style=\"color:red\">bad</p>"
     else:
         similar_words_html = ""
 
@@ -141,7 +160,8 @@ async def check_password(password: str = Form(), top_similar: int = Form(),
         <a href="/">Go back</a>
         <h3>Your password is {password_strength}</h3>
         {html_table}
-        {similar_words_html}
+        {similar_words_html}<br>
+        {wordlist_html}
     </body>
 </html>
 """
