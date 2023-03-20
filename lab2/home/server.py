@@ -52,7 +52,7 @@ async def http_exception_handler(request: Request, err: StarletteHTTPException):
                             headers={"WWW-Authenticate": "Basic"})
 
     return HTMLResponse(status_code=err.status_code, content=f"""
-        <p>There was an error processing your request:</p>
+        <p>There was an error. Verify requested data and try again.</p>
         <img src="/error/{err.status_code}" alt="I tried to get you an HTTP cat but it's gone somewhere"></img>
         """)
 
@@ -103,8 +103,9 @@ async def main(credentials: HTTPBasicCredentials = Depends(security)):
 
 @app.post("/check", response_class=HTMLResponse)
 async def check_password(password: str = Form(), top_similar: int = Form(),
-                         variations: int = Form(), dict_url: Union[str, None] = Form(),
+                         variations: int = Form(), dict_url: str = Form(None),
                          credentials: HTTPBasicCredentials = Depends(security)):
+
     verify_user(credentials)
 
     if not password:
@@ -128,9 +129,6 @@ async def check_password(password: str = Form(), top_similar: int = Form(),
             password_strength = "<p style=\"color:red\">bad</p>"
         else:
             wordlist_html = "<p>The URL you provided is either broken or yielded no keywords</p>"
-
-
-
 
     if sum(similar_passwords_leaked.values()) > 0:
         html_table = "<h3>Similar passwords leaked</h3>" \

@@ -17,12 +17,15 @@ class TextrazorAPI:
                                  headers=self.headers)
         if response.status_code != 200:
             return
-
-        sentences = response.json()["response"]["sentences"]
-        self.words = set()
-        for sentence in sentences:
-            for word in sentence['words']:
-                self.words.add(word['stem'])
+        try:
+            sentences = response.json()["response"]["sentences"]
+            self.words = set()
+            for sentence in sentences:
+                for word in sentence['words']:
+                    if "stem" in word.keys():
+                        self.words.add(word['stem'])
+        except KeyError:
+            return
 
     def best_matches(self, password):
         if len(self.words) == 0:
