@@ -1,0 +1,69 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "cs_client/1.0.0": {
+        "dependencies": {
+          "zeroc.ice.net": "3.7.9"
+        },
+        "runtime": {
+          "cs_client.dll": {}
+        }
+      },
+      "zeroc.ice.net/3.7.9": {
+        "runtime": {
+          "lib/netstandard2.0/Glacier2.dll": {
+            "assemblyVersion": "3.7.9.0",
+            "fileVersion": "3.7.9.0"
+          },
+          "lib/netstandard2.0/Ice.dll": {
+            "assemblyVersion": "3.7.9.0",
+            "fileVersion": "3.7.9.0"
+          },
+          "lib/netstandard2.0/IceBox.dll": {
+            "assemblyVersion": "3.7.9.0",
+            "fileVersion": "3.7.9.0"
+          },
+          "lib/netstandard2.0/IceDiscovery.dll": {
+            "assemblyVersion": "3.7.9.0",
+            "fileVersion": "3.7.9.0"
+          },
+          "lib/netstandard2.0/IceGrid.dll": {
+            "assemblyVersion": "3.7.9.0",
+            "fileVersion": "3.7.9.0"
+          },
+          "lib/netstandard2.0/IceLocatorDiscovery.dll": {
+            "assemblyVersion": "3.7.9.0",
+            "fileVersion": "3.7.9.0"
+          },
+          "lib/netstandard2.0/IceSSL.dll": {
+            "assemblyVersion": "3.7.9.0",
+            "fileVersion": "3.7.9.0"
+          },
+          "lib/netstandard2.0/IceStorm.dll": {
+            "assemblyVersion": "3.7.9.0",
+            "fileVersion": "3.7.9.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "cs_client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "zeroc.ice.net/3.7.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bYDoNR8hiLHf990EERjV3CaumToWyiyvm9f1tkQjoarec2+ArwXjEQ9lpCCpVJ2WnKyhDRN3pFbHn1cNavvwKA==",
+      "path": "zeroc.ice.net/3.7.9",
+      "hashPath": "zeroc.ice.net.3.7.9.nupkg.sha512"
+    }
+  }
+}

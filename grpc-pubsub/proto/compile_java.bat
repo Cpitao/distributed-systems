@@ -1,0 +1,1 @@
+protoc --java_out=../java_server/gen --plugin=protoc-gen-grpc-java=protoc-gen-grpc-java-1.54.0-windows-x86_64.exe --grpc-java_out=../java_server/gen event.proto

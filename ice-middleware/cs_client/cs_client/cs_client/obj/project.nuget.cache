@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gcocdF8mgUyjzYV4agbw7rDupldAqRbRWfX6BJhoNoI3OgdnHAjmFHIcyhQ+mvBjLNmtZLQNA1NR1341vXKXFw==",
+  "success": true,
+  "projectFilePath": "D:\\studia\\infa\\sem6\\rozprochy\\lab4\\homework\\part2\\cs_client\\cs_client\\cs_client\\cs_client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Piotr\\.nuget\\packages\\zeroc.ice.net\\3.7.9\\zeroc.ice.net.3.7.9.nupkg.sha512"
+  ],
+  "logs": []
+}

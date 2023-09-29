@@ -1,0 +1,294 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "zeroc.ice.net/3.7.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Glacier2.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/Ice.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceBox.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceDiscovery.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceGrid.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceLocatorDiscovery.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceSSL.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceStorm.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Glacier2.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/Ice.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceBox.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceDiscovery.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceGrid.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceLocatorDiscovery.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceSSL.dll": {
+            "related": ".pdb"
+          },
+          "lib/netstandard2.0/IceStorm.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "build/zeroc.ice.net.props": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "zeroc.ice.net/3.7.9": {
+      "sha512": "bYDoNR8hiLHf990EERjV3CaumToWyiyvm9f1tkQjoarec2+ArwXjEQ9lpCCpVJ2WnKyhDRN3pFbHn1cNavvwKA==",
+      "type": "package",
+      "path": "zeroc.ice.net/3.7.9",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ICE_LICENSE.txt",
+        "LICENSE.txt",
+        "THIRD_PARTY_LICENSE.txt",
+        "build/zeroc.ice.net.props",
+        "lib/net45/Glacier2.XML",
+        "lib/net45/Glacier2.dll",
+        "lib/net45/Glacier2.pdb",
+        "lib/net45/Ice.XML",
+        "lib/net45/Ice.dll",
+        "lib/net45/Ice.pdb",
+        "lib/net45/IceBox.XML",
+        "lib/net45/IceBox.dll",
+        "lib/net45/IceBox.pdb",
+        "lib/net45/IceDiscovery.XML",
+        "lib/net45/IceDiscovery.dll",
+        "lib/net45/IceDiscovery.pdb",
+        "lib/net45/IceGrid.XML",
+        "lib/net45/IceGrid.dll",
+        "lib/net45/IceGrid.pdb",
+        "lib/net45/IceLocatorDiscovery.XML",
+        "lib/net45/IceLocatorDiscovery.dll",
+        "lib/net45/IceLocatorDiscovery.pdb",
+        "lib/net45/IcePatch2.XML",
+        "lib/net45/IcePatch2.dll",
+        "lib/net45/IcePatch2.pdb",
+        "lib/net45/IceSSL.XML",
+        "lib/net45/IceSSL.dll",
+        "lib/net45/IceSSL.pdb",
+        "lib/net45/IceStorm.XML",
+        "lib/net45/IceStorm.dll",
+        "lib/net45/IceStorm.pdb",
+        "lib/netstandard2.0/Glacier2.dll",
+        "lib/netstandard2.0/Glacier2.pdb",
+        "lib/netstandard2.0/Ice.dll",
+        "lib/netstandard2.0/Ice.pdb",
+        "lib/netstandard2.0/IceBox.dll",
+        "lib/netstandard2.0/IceBox.pdb",
+        "lib/netstandard2.0/IceDiscovery.dll",
+        "lib/netstandard2.0/IceDiscovery.pdb",
+        "lib/netstandard2.0/IceGrid.dll",
+        "lib/netstandard2.0/IceGrid.pdb",
+        "lib/netstandard2.0/IceLocatorDiscovery.dll",
+        "lib/netstandard2.0/IceLocatorDiscovery.pdb",
+        "lib/netstandard2.0/IceSSL.dll",
+        "lib/netstandard2.0/IceSSL.pdb",
+        "lib/netstandard2.0/IceStorm.dll",
+        "lib/netstandard2.0/IceStorm.pdb",
+        "logo.png",
+        "slice/Glacier2/Metrics.ice",
+        "slice/Glacier2/PermissionsVerifier.ice",
+        "slice/Glacier2/PermissionsVerifierF.ice",
+        "slice/Glacier2/Router.ice",
+        "slice/Glacier2/RouterF.ice",
+        "slice/Glacier2/SSLInfo.ice",
+        "slice/Glacier2/Session.ice",
+        "slice/Ice/BuiltinSequences.ice",
+        "slice/Ice/Communicator.ice",
+        "slice/Ice/CommunicatorF.ice",
+        "slice/Ice/Connection.ice",
+        "slice/Ice/ConnectionF.ice",
+        "slice/Ice/Current.ice",
+        "slice/Ice/Endpoint.ice",
+        "slice/Ice/EndpointF.ice",
+        "slice/Ice/EndpointTypes.ice",
+        "slice/Ice/FacetMap.ice",
+        "slice/Ice/Identity.ice",
+        "slice/Ice/ImplicitContext.ice",
+        "slice/Ice/ImplicitContextF.ice",
+        "slice/Ice/Instrumentation.ice",
+        "slice/Ice/InstrumentationF.ice",
+        "slice/Ice/LocalException.ice",
+        "slice/Ice/Locator.ice",
+        "slice/Ice/LocatorF.ice",
+        "slice/Ice/Logger.ice",
+        "slice/Ice/LoggerF.ice",
+        "slice/Ice/Metrics.ice",
+        "slice/Ice/ObjectAdapter.ice",
+        "slice/Ice/ObjectAdapterF.ice",
+        "slice/Ice/ObjectFactory.ice",
+        "slice/Ice/Plugin.ice",
+        "slice/Ice/PluginF.ice",
+        "slice/Ice/Process.ice",
+        "slice/Ice/ProcessF.ice",
+        "slice/Ice/Properties.ice",
+        "slice/Ice/PropertiesAdmin.ice",
+        "slice/Ice/PropertiesF.ice",
+        "slice/Ice/RemoteLogger.ice",
+        "slice/Ice/Router.ice",
+        "slice/Ice/RouterF.ice",
+        "slice/Ice/ServantLocator.ice",
+        "slice/Ice/ServantLocatorF.ice",
+        "slice/Ice/SliceChecksumDict.ice",
+        "slice/Ice/ValueFactory.ice",
+        "slice/Ice/Version.ice",
+        "slice/IceBT/ConnectionInfo.ice",
+        "slice/IceBT/EndpointInfo.ice",
+        "slice/IceBT/Types.ice",
+        "slice/IceBox/IceBox.ice",
+        "slice/IceGrid/Admin.ice",
+        "slice/IceGrid/Descriptor.ice",
+        "slice/IceGrid/Exception.ice",
+        "slice/IceGrid/FileParser.ice",
+        "slice/IceGrid/PluginFacade.ice",
+        "slice/IceGrid/Registry.ice",
+        "slice/IceGrid/Session.ice",
+        "slice/IceGrid/UserAccountMapper.ice",
+        "slice/IceIAP/ConnectionInfo.ice",
+        "slice/IceIAP/EndpointInfo.ice",
+        "slice/IcePatch2/FileInfo.ice",
+        "slice/IcePatch2/FileServer.ice",
+        "slice/IceSSL/ConnectionInfo.ice",
+        "slice/IceSSL/ConnectionInfoF.ice",
+        "slice/IceSSL/EndpointInfo.ice",
+        "slice/IceStorm/IceStorm.ice",
+        "slice/IceStorm/Metrics.ice",
+        "tools/net45/bzip2.dll",
+        "tools/net45/bzip2.pdb",
+        "tools/net45/iceboxnet.exe",
+        "tools/net45/iceboxnet.exe.config",
+        "tools/net45/iceboxnet.pdb",
+        "tools/net6.0/Ice.dll",
+        "tools/net6.0/Ice.pdb",
+        "tools/net6.0/IceBox.dll",
+        "tools/net6.0/IceBox.pdb",
+        "tools/net6.0/IceSSL.dll",
+        "tools/net6.0/IceSSL.pdb",
+        "tools/net6.0/bzip2.dll",
+        "tools/net6.0/bzip2.pdb",
+        "tools/net6.0/iceboxnet.deps.json",
+        "tools/net6.0/iceboxnet.dll",
+        "tools/net6.0/iceboxnet.pdb",
+        "tools/net6.0/iceboxnet.runtimeconfig.json",
+        "tools/net7.0/Ice.dll",
+        "tools/net7.0/Ice.pdb",
+        "tools/net7.0/IceBox.dll",
+        "tools/net7.0/IceBox.pdb",
+        "tools/net7.0/IceSSL.dll",
+        "tools/net7.0/IceSSL.pdb",
+        "tools/net7.0/bzip2.dll",
+        "tools/net7.0/bzip2.pdb",
+        "tools/net7.0/iceboxnet.deps.json",
+        "tools/net7.0/iceboxnet.dll",
+        "tools/net7.0/iceboxnet.pdb",
+        "tools/net7.0/iceboxnet.runtimeconfig.json",
+        "tools/slice2cs.exe",
+        "tools/slice2html.exe",
+        "zeroc.ice.net.3.7.9.nupkg.sha512",
+        "zeroc.ice.net.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "zeroc.ice.net >= 3.7.9"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Piotr\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\studia\\infa\\sem6\\rozprochy\\lab4\\homework\\part2\\cs_client\\cs_client\\cs_client\\cs_client.csproj",
+      "projectName": "cs_client",
+      "projectPath": "D:\\studia\\infa\\sem6\\rozprochy\\lab4\\homework\\part2\\cs_client\\cs_client\\cs_client\\cs_client.csproj",
+      "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
+      "outputPath": "D:\\studia\\infa\\sem6\\rozprochy\\lab4\\homework\\part2\\cs_client\\cs_client\\cs_client\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Piotr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "zeroc.ice.net": {
+            "target": "Package",
+            "version": "[3.7.9, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

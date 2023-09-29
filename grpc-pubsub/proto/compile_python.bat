@@ -1,0 +1,1 @@
+python -m grpc_tools.protoc -I. --python_out=../python_client/gen --grpc_python_out=../python_client/gen --pyi_out=../python_client/gen event.proto

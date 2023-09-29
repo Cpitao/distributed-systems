@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "events";
+
+message GameSubscription {
+  enum Type {
+    FOOTBALL = 0;
+    TENNIS = 1;
+  }
+
+  Type type = 1;
+  string side1 = 2; // either player or team name, depending on typeis
+  string side2 = 3; // as above
+}
+
+message FootballGame {
+  string team1 = 1;
+  string team2 = 2;
+
+  message FootballScore {
+    int32 team1Score = 1;
+    int32 team2Score = 2;
+  }
+
+  message Scorers {
+    repeated string team1Scorers = 1;
+    repeated string team2Scorers = 2;
+  }
+
+  FootballScore score = 3;
+  Scorers scorers = 4;
+}
+
+message TennisGame {
+  string player1 = 1;
+  string player2 = 2;
+
+  message TennisScore {
+    message GameScore {
+      enum Points {
+        FIFTEEN = 0;
+        THIRTY = 1;
+        FORTY = 2;
+        ADV = 3;
+      }
+    }
+
+    message SetScore {
+      int32 player1Sets = 1;
+      int32 player2Sets = 2;
+    }
+
+    repeated SetScore sets = 1;
+  }
+
+  repeated TennisScore score = 3;
+}
+
+message GameScore {
+
+  oneof gameInfo {
+    FootballGame footballGame = 1;
+    TennisGame tennisGame = 2;
+  }
+
+}
+
+service ScoreChange {
+  rpc Subscribe(GameSubscription) returns (stream GameScore) {}
+}
